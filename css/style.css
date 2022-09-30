@@ -251,7 +251,7 @@ input{
   line-height: 22px;
   color: #000;
   border: 2px solid #1B88EC;
-  border-radius: 10px;
+  border-radius: 20px 300px;
   display: block;
   text-align: center;
   padding: 28px 50px;
@@ -387,6 +387,9 @@ input{
 }
 .owl-nav button:last-of-type:before{
   background-image: url('../img/owl-right.png');
+}
+.owl-carousel-3 {
+  padding: 0 60px;
 }
 .owl-nav{
   display: flex;
@@ -537,6 +540,13 @@ video{
 .quality .owl-nav button{
   height: 98%;
 }
+.quality a{
+  display: block;
+  margin: auto;
+}
+.w-80{
+  width: 80%;
+}
 .quality .owl-nav button:before{
   top: 40%;
 }
@@ -635,7 +645,7 @@ video{
 .articles .owl-nav button:before{
   display: none;
 }
-.owl-nav button{
+.articles .owl-nav button{
   background: transparent !important;
   color: #fff !important;
   font-size: 60px !important;
@@ -667,4 +677,162 @@ video{
   padding: 17px 30px;
   margin-right: 20px;
   width: 260px;
+}
+.catalog-download{
+  background: linear-gradient(81.36deg, #1B88EC 1.96%, #3B3B4B 100%);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+  padding: 36px;
+}
+.catalog-download__title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  max-width: 210px;
+}
+.catalog-download__link{
+  display: inline-block;
+  margin-top: 50px;
+}
+.catalog-download__img{
+  position: absolute;
+  left: 50%;
+  top: -30px;
+}
+.quality .owl-nav{
+  left: 0%;
+  width: 100%;
+}
+.catalog-download__link a{
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3D3D3F;
+  padding: 19px 73px;
+}
+.advantages__link a{
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3D3D3F;
+  padding: 19px 73px;
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 30px;
+}
+.advantages__title--big{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 105%;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+  max-width: 477px;
+  padding-top: 16px;
+  padding-left: 30px;
+  margin-bottom: 62px;
+}
+.ml-30{
+  margin-left: 30px;
+}
+.relative{
+  position: relative;
+}
+.advantages__title--big:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 477px;
+    height: 134px;
+    background: linear-gradient(127.45deg, #1B88EC -0.53%, #1C7DC3 101.73%), linear-gradient(120.55deg, #DC1E29 10.38%, #BF2931 105.38%);
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    z-index: -1;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.advantages__title--big.even:before{
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+  left: auto;
+  right: 0;
+}
+.tooltips{
+  position: relative;
+}
+.tooltips button{
+  position: absolute;
+  background: none;
+}
+.tooltip1{
+  left: 7%;
+  top: 28%;
+}
+.tooltip2{
+  left: 47%;
+  top: 17%;
+}
+.tooltip3{
+  left: 74%;
+  top: 8%;
+}
+.tooltip4{
+  left: 70%;
+  top: 50%;
+}
+.tooltip5{
+  left: 33%;
+  top: 68%;
+}
+.tooltip-box{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 60px;
+}
+.tooltip-box input{
+  line-height: normal;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  left: 0;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  z-index: 2;
+}
+.tooltip-box label{
+  margin: 0;
+  transition: all .5s ease;
+  width: 100%;
+  background: linear-gradient(93.13deg, #FFFFFF -3.28%, #FAFAFA 101.66%);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 105%;
+  text-align: center;
+  color: #3D3D3F;
+  border: 1px solid #1B88EC;
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+}
+.tooltip-box input:checked + label{
+  color: #fff;
+  background: linear-gradient(127.45deg, #1B88EC -0.53%, #1C7DC3 101.73%), #3D3D3F;
 }

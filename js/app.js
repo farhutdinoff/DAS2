@@ -54,3 +54,50 @@ $('.owl-carousel-6').owlCarousel({
         }
     }
 })
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+$('#tooltiptext1').tooltip('show')
+
+$('.video').parent().click(function () {
+
+  if($(this).children(".video").get(0).paused){
+ $(this).children(".video").get(0).play();
+$(this).children(".play-button").fadeOut();
+
+    }else{
+ $(this).children(".video").get(0).pause();
+
+  $(this).children(".play-button").fadeIn();
+
+    }
+
+});
+
+$('#tooltipbtn1').click(
+    function() {
+      $('#tooltiptext1').tooltip('show');
+    },
+    function() {
+      $('#tooltiptext1').tooltip('hide');
+    }
+);
+
+
+
+$('#tooltipbtn1').on('click', function(){
+$('#tooltiptext1').tooltip('show');
+});
+$('#tooltipbtn2').click('click', function(){
+$('#tooltiptext2').tooltip('show');
+});
+$('#tooltipbtn3').click('click', function(){
+$('#tooltiptext3').tooltip('show');
+});
+$('#tooltipbtn4').click('click', function(){
+$('#tooltiptext4').tooltip('show');
+});
+$('#tooltipbtn5').click('click', function(){
+$('#tooltiptext5').tooltip('show');
+});
