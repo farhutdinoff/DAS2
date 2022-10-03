@@ -14,14 +14,15 @@ $('.owl-carousel-2').owlCarousel({
 $('.owl-carousel-3').owlCarousel({
     loop:true,
     margin:30,
-    dots:false,
-    nav: true,
     responsive:{
         0:{
+            dots:true,
             items:1
         },
         800:{
-            items:3
+            nav: true,
+            items:3,
+            dots:false
         }
     }
 })
@@ -58,7 +59,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-$('#tooltiptext1').tooltip('show')
+$('.tooltiptext1').tooltip('show')
 
 $('.video').parent().click(function () {
 
@@ -75,29 +76,45 @@ $(this).children(".play-button").fadeOut();
 
 });
 
-$('#tooltipbtn1').click(
-    function() {
-      $('#tooltiptext1').tooltip('show');
-    },
-    function() {
-      $('#tooltiptext1').tooltip('hide');
-    }
-);
+
+$('.tooltipbtn1').on('click', function(){
+$('.tooltiptext1').tooltip('show');
+$('.tooltiptext2').tooltip('hide');
+$('.tooltiptext3').tooltip('hide');
+$('.tooltiptext4').tooltip('hide');
+$('.tooltiptext5').tooltip('hide');
+});
+$('.tooltipbtn2').click('click', function(){
+$('.tooltiptext2').tooltip('show');
+$('.tooltiptext1').tooltip('hide');
+$('.tooltiptext3').tooltip('hide');
+$('.tooltiptext4').tooltip('hide');
+$('.tooltiptext5').tooltip('hide');
+});
+$('.tooltipbtn3').click('click', function(){
+$('.tooltiptext3').tooltip('show');
+$('.tooltiptext2').tooltip('hide');
+$('.tooltiptext1').tooltip('hide');
+$('.tooltiptext4').tooltip('hide');
+$('.tooltiptext5').tooltip('hide');
+});
+$('.tooltipbtn4').click('click', function(){
+$('.tooltiptext4').tooltip('show');
+$('.tooltiptext2').tooltip('hide');
+$('.tooltiptext3').tooltip('hide');
+$('.tooltiptext1').tooltip('hide');
+$('.tooltiptext5').tooltip('hide');
+});
+$('.tooltipbtn5').click('click', function(){
+$('.tooltiptext5').tooltip('show');
+$('.tooltiptext2').tooltip('hide');
+$('.tooltiptext3').tooltip('hide');
+$('.tooltiptext4').tooltip('hide');
+$('.tooltiptext1').tooltip('hide');
+});
 
 
-
-$('#tooltipbtn1').on('click', function(){
-$('#tooltiptext1').tooltip('show');
-});
-$('#tooltipbtn2').click('click', function(){
-$('#tooltiptext2').tooltip('show');
-});
-$('#tooltipbtn3').click('click', function(){
-$('#tooltiptext3').tooltip('show');
-});
-$('#tooltipbtn4').click('click', function(){
-$('#tooltiptext4').tooltip('show');
-});
-$('#tooltipbtn5').click('click', function(){
-$('#tooltiptext5').tooltip('show');
-});
+$('#menuToggle').click( function(){
+   $('.header-mobile__nav').toggleClass("active");
+   $('body').toggleClass("overflow-hidden");
+ });
